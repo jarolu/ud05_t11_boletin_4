@@ -19,7 +19,8 @@
                 echo "<p>* $errores[$i] </p>";
             }
         }else{
-            
+            pintarFormulario();
+            pintarPiramide($altura, $icono);
         }
 
 
@@ -61,6 +62,15 @@
             </form>
             <?php
 
+        }
+
+
+        function pintarPiramide($a, $i){            
+            $linea="";
+            for($indice=0; $indice<$a; $indice++){
+                $linea=$linea."<img src='imgs/$i' height='24px'>";
+                echo $linea."<br>";
+            }
         }
     ?>
     
